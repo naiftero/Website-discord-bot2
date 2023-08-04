@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&family=Ubuntu:wght@300&display=swap');
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+:root {
+  --background-color: #121212;
+  /* Background color */
+  --text-color: #ffffff;
+  /* Text color */
+  --accent-color: #ff6600;
+  /* Accent color */
+  --button-color: #ff8040;
+  /* Button color */
+  --hover-color: #e65c00;
+  /* Hover color */
+  --grey-text: #999999;
+  /* notes text color */
+  --nav-bar-color: #333333; 
+  /*  nav color */
+  --box-color: #212121;
+  /* box color */
+  --box-hover-color: #0d0d0d;
+  /* box hover color */
+}
+body::-webkit-scrollbar {
+  width: 9px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--box-hover-color);
+  border-radius: 20px;
+}
+a{
+   text-decoration: none;
+    color: var(--text-color);
+}
+span{
+  color: #00757e;
+}
+/* nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--nav-bar-color);
+    padding: 10px 20px;
+}
+
+.logo {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: start;
+    flex-direction: row-reverse; 
+    align-items: center;
+    margin: 0;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 0;
+}
+
+.links li {
+    margin-right: 15px;
+}
+
+.links li:last-child {
+    margin-right: 0;
+}
+
+.links a {
+     text-decoration: none;
+    color: var(--text-color);
+}
+.max {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+.title {
+  color: var(--text-color);
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+}
+
+.title h1 {
+  font-size: 28px;
+}
+
+.title p {
+  margin-top: -25px;
+  color: var(--grey-text);
+  font-size: 16px;
+}
+
+/* About */
+
+.bot-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.bot-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.bot-image img {
+  max-width: 150px;
+  height: auto;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.bot-text {
+  text-align: left;
+  color: var(--text-color);
+}
+
+.bot-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.bot-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.bot-invite,
+.server-invite {
+  padding: 10px 20px;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.bot-invite:hover,
+.server-invite:hover {
+  background-color: var(--hover-color);
+}
+
+/* Cmd Bot */
+
+.content-container {
+    display: flex;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.image, .text {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.text p {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.reverse .image, .reverse .text {
+    text-align: right;
+}
+
+.reverse .image img {
+    margin-left: 10px;
+}
+
+@media (max-width: 767px) {
+    .bot-content {
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    .bot-image img {
+        margin-right: auto; 
+        margin-bottom: 20px;
+    }
+    .bot-text {
+        margin: 0; 
+    }
+     .content-container {
+        flex-direction: column;
+    }
+    .image, .text {
+        text-align: center;
+    }
+    .image img {
+        margin-bottom: 10px;
+    }
+}
+/* help commands */
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--box-color);
+    color: #fff;
+}
+
+.menu-item {
+    cursor: pointer;
+    padding: 10px 0;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-divider {
+    border: 0.5px solid #333;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.command-details {
+    display: none;
+    margin-top: 20px;
+}
+
+.command-details p {
+    margin-top: 10px;
+}
+
+.menu-icon {
+    transition: transform 0.3s;
+}
+
+.menu-item.active .menu-icon {
+    transform: rotate(180deg);
+}
+
+/* footer */
+footer {
+    margin-top: 10%;
+    width: 100%;
+    background-color: var(--nav-bar-color);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
