@@ -17,6 +17,6 @@ All you need to change are a few things:
 
 6- Change line 93/101/109/117 /NameCommand to your command name
 
-7- Change line 97//105/113/121To use, type:<code>!command2 [user] to your command description
+7- Change line 97//105/113/121To use, type: !command2 [user] to your command description
 
 If you need anything, you can contact me through Discord: ix.7
